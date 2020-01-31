@@ -1,3 +1,5 @@
+package day_one
+
 var global: String = "I AM GLOBAL!"
 
 class Person {
