@@ -32,4 +32,19 @@ fun main() {
     provider.printInfo(Person())
     provider.getSessionId()
 
+    checkTypes(provider)
+}
+
+fun checkTypes(infoProvider: PersonInfoProvider) {
+    if (infoProvider !is SessionInfoProvider) {
+        println("is not a SessionInfoProvider")
+    } else {
+        println("is a SessionInfoProvider")
+
+        // Smart Casting
+        infoProvider.getSessionId()
+
+        // Manual Casting
+        (infoProvider as SessionInfoProvider).getSessionId()
+    }
 }
